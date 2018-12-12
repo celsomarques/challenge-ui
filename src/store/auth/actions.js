@@ -1,6 +1,8 @@
+import { get } from 'lodash/fp'
 import axios from 'axios'
 
 export const login = async({ commit }, data) => {
-  const token = await axios.post('http://localhost:8081/login', data)
-  commit('token', token)
+  const res = await axios.post('http://localhost:8081/login', data)
+  const token = get('data.token', res)
+  if (token) commit('token', token)
 }
