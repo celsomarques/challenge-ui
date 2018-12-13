@@ -14,7 +14,7 @@
           class="elevation-1"
         >
           <template slot="items" slot-scope="props">
-            <td><router-link :to="`/flight/${ props.item.id }`">{{ props.item.departure.code }}</router-link></td>
+            <td><router-link :to="`/flights/${ props.item.id }`">{{ props.item.departure.code }}</router-link></td>
             <td>{{ props.item.departureTime | formatDate }}</td>
             <td>{{ props.item.arrival.code }}</td>
             <td>{{ props.item.scheduledTime | formatDate }}</td>
