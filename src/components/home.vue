@@ -2,7 +2,7 @@
   <v-app>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Challenge</span>
+        <span><a href="/">Challenge</a></span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn

@@ -1,4 +1,11 @@
 export default {
-  flight: null,
+  flight: {
+    pilot: {},
+    aircraft: '',
+    departure: {},
+    departureTime: '',
+    arrival: {},
+    scheduledTime: ''
+  },
   flights: []
 }
