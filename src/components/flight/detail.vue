@@ -16,31 +16,35 @@
 
           <v-card-text>
             <v-layout row pa-2>
-              <v-flex xs6>
+              <v-flex xs4>
                 <h4>Pilot</h4>
                 <span>{{ flight.pilot.name }}</span>
               </v-flex>
-              <v-flex xs6>
+              <v-flex xs4>
                 <h4>Aircraft Tail Number</h4>
                 <span>{{ flight.aircraft }}</span>
               </v-flex>
+              <v-flex xs4>
+                <h4>Status</h4>
+                <span>{{ flight.status }}</span>
+              </v-flex>
             </v-layout>
             <v-layout row pa-2>
-              <v-flex xs6>
+              <v-flex xs4>
                 <h4>Departure</h4>
                 <span>{{ flight.departure.code }} - {{ flight.departure.city }}</span>
               </v-flex>
-              <v-flex xs6>
+              <v-flex xs4>
                 <h4>Departure Time</h4>
                 <span>{{ flight.departureTime | formatDate }}</span>
               </v-flex>
             </v-layout>
             <v-layout row pa-2>
-              <v-flex xs6>
+              <v-flex xs4>
                 <h4>Arrival</h4>
                 <span>{{ flight.arrival.code }} - {{ flight.arrival.city }}</span>
               </v-flex>
-              <v-flex xs6>
+              <v-flex xs4>
                 <h4>Scheduled Time</h4>
                 <span>{{ flight.scheduledTime | formatDate }}</span>
               </v-flex>

@@ -5,6 +5,7 @@
       wrap
     >
       <v-flex xs12>
+        <Search />
       </v-flex>
 
       <v-flex mb-4>
@@ -29,14 +30,14 @@
 <script>
 
   import { mapGetters } from 'vuex'
+  import Search from './search'
 
   export default {
+    components: {
+      Search
+    },
     computed: {
       ...mapGetters('flight', [ 'flights' ])
-    },
-    mounted() {
-      const token = this.$store.getters['auth/getToken']
-      this.$store.dispatch('flight/list', token)
     },
     data() {
       return  {
