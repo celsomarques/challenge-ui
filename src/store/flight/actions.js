@@ -1,10 +1,11 @@
 import { find, get } from 'lodash/fp'
 import axios from 'axios'
-import env from '../../env'
+
+const { API } = process.env
 
 const getUrl = (status) => /all/i.test(status)
-  ? `${env.API}/flights`
-  : `${env.API}/flights/search/status?q=${status}`
+  ? `${API}/flights`
+  : `${API}/flights/search/status?q=${status}`
 
 export const search = async({ commit }, data) => {
 
